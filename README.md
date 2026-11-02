@@ -1,4 +1,4 @@
-# LSPS / BAP under wind — experiment scripts (C&OR paper; DESIGN.md v2, 19 Oct 2026)
+# LSPS / BAP under wind — experiment scripts (ITOR paper; DESIGN.md v2, 19 Oct 2026)
 
 Online berth allocation under time-dependent, berth-specific wind: exact perfect-information optima (CP-SAT free
 sequencing; label-setting DP with normalization, dominance and bounding for the arrival-ordered variant), and online
