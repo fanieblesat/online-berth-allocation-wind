@@ -1,0 +1,87 @@
+== LookDP-R vs best rule, all 20 points (all instances)
+  range -11.28 .. -2.21 %; max p 0.0027; all below: True
+  sensitivity+V30: range -11.28 .. -2.21
+== LookDP-R vs every rule and DQN at every point: worst gap and max p
+  worst -2.21 %, max p 0.0027
+== LookDP-R vs RollDP on all instances, sensitivity points + V30
+  mu5        +0.24 p=0.49 eq=True
+  mu15       +0.59 p=0.0671 eq=False
+  mu20       +0.55 p=0.113 eq=False
+  sig1.5     +0.42 p=0.157 eq=True
+  sig5.5     -1.49 p=0.0438 eq=False
+  sig8.0     -0.21 p=0.681 eq=False
+  theta0.06  +0.12 p=0.737 eq=True
+  theta0.24  +0.07 p=0.737 eq=True
+  alpha0.25  +0.35 p=0.538 eq=False
+  alpha0.75  -0.40 p=0.478 eq=False
+  B4         -0.50 p=0.911 eq=False
+  B5         -1.36 p=0.0332 eq=False
+  load0.6    -1.18 p=0.0137 eq=False
+  load0.95   +0.41 p=0.668 eq=False
+  kappa0.5   +0.68 p=0.324 eq=False
+  kappa2.0   -0.05 p=0.926 eq=True
+  V30        +0.69 p=0.205 eq=False
+  range -1.49 .. 0.69; p<0.05: ['sig5.5', 'B5', 'load0.6']; eq: ['mu5', 'sig1.5', 'theta0.06', 'theta0.24', 'kappa2.0']
+== LookDP-R vs RollDP on the decomposition instances (Delta_pi), sensitivity points + V30
+  range -1.49 .. 0.69; p<0.05: [('sig5.5', np.float64(-1.49), np.float64(0.044)), ('load0.6', np.float64(-1.18), np.float64(0.014))]
+== LookDP-R vs LookDP-0 (value of the rollout terminal cost), all 20 points
+  lower mean at 20/20; p<0.05 at 16/20; range -5.31 .. -0.31
+  sensitivity: {'V30': np.float64(-1.25), 'mu5': np.float64(-1.52), 'mu15': np.float64(-3.49), 'mu20': np.float64(-5.31), 'sig1.5': np.float64(-1.52), 'sig5.5': np.float64(-2.28), 'sig8.0': np.float64(-3.64), 'theta0.06': np.float64(-2.19), 'theta0.24': np.float64(-1.56), 'alpha0.25': np.float64(-1.47), 'alpha0.75': np.float64(-2.26), 'B4': np.float64(-1.33), 'B5': np.float64(-1.03), 'load0.6': np.float64(-0.45), 'load0.95': np.float64(-4.88), 'kappa0.5': np.float64(-0.97), 'kappa2.0': np.float64(-2.62)}
+== LookDP-RV vs LookDP-R (value of the learned correction), all 20 points
+  higher mean at 19/20; sig. higher (p<0.05) at ['V40', 'V50', 'mu15', 'sig5.5', 'B5', 'load0.6']; sig. lower at []; range -0.20 .. 1.94
+== RollDP-T vs RollDP, all 20 points (all instances)
+  lower mean at 14/20; sig lower [('sig5.5', np.float64(-1.72), np.float64(0.011)), ('theta0.06', np.float64(-1.12), np.float64(0.019)), ('load0.6', np.float64(-1.23), np.float64(0.011))]; sig higher []; range -1.72 .. 0.44
+== lowest-mean online policy per point (all instances)
+  V20        LookDP-R
+  V30        RollDP-T
+  V40        LookDP-R
+  V50        LookDP-R
+  mu5        RollDP-T
+  mu15       RollDP
+  mu20       RollDP
+  sig1.5     RollDP
+  sig5.5     RollDP-T
+  sig8.0     RollDP-T
+  theta0.06  RollDP-T
+  theta0.24  RollDP-T
+  alpha0.25  RollDP-T
+  alpha0.75  RollDP-T
+  B4         LookDP-R
+  B5         LookDP-R
+  load0.6    RollDP-T
+  load0.95   RollDP
+  kappa0.5   RollDP
+  kappa2.0   RollDP-T
+== smallest Delta_info over RollDP, RollDP-T, LookDP-R (decomposition instances)
+  V20        n=20 RollDP 4.27  min 3.49 (LookDP-R)  reduction 0.78 pts
+  V30        n=20 RollDP 4.66  min 4.25 (RollDP-T)  reduction 0.41 pts
+  V40        n=13 RollDP 4.41  min 4.07 (LookDP-R)  reduction 0.34 pts
+  V50        n= 3 RollDP 4.88  min 3.26 (LookDP-R)  reduction 1.63 pts
+  mu5        n=20 RollDP 2.72  min 2.64 (RollDP-T)  reduction 0.08 pts
+  mu15       n=20 RollDP 5.20  min 5.20 (RollDP)  reduction 0.00 pts
+  mu20       n=20 RollDP 11.27  min 11.27 (RollDP)  reduction 0.00 pts
+  sig1.5     n=20 RollDP 2.05  min 2.05 (RollDP)  reduction 0.00 pts
+  sig5.5     n=20 RollDP 8.98  min 7.10 (RollDP-T)  reduction 1.88 pts
+  sig8.0     n=20 RollDP 11.20  min 9.65 (RollDP-T)  reduction 1.55 pts
+  theta0.06  n=20 RollDP 7.48  min 6.27 (RollDP-T)  reduction 1.21 pts
+  theta0.24  n=20 RollDP 3.73  min 3.27 (RollDP-T)  reduction 0.46 pts
+  alpha0.25  n=20 RollDP 4.15  min 3.75 (RollDP-T)  reduction 0.40 pts
+  alpha0.75  n=20 RollDP 6.07  min 5.19 (RollDP-T)  reduction 0.88 pts
+  B4         n=18 RollDP 4.46  min 4.40 (RollDP-T)  reduction 0.06 pts
+  B5         n=11 RollDP 4.70  min 3.46 (LookDP-R)  reduction 1.24 pts
+  load0.6    n=20 RollDP 4.64  min 3.35 (RollDP-T)  reduction 1.29 pts
+  load0.95   n=20 RollDP 5.04  min 5.04 (RollDP)  reduction 0.00 pts
+  kappa0.5   n=20 RollDP 3.99  min 3.99 (RollDP)  reduction 0.00 pts
+  kappa2.0   n=20 RollDP 5.02  min 4.24 (RollDP-T)  reduction 0.78 pts
+== LookDP-R at V40/V50 split by decomposition instances (RollDP few fallbacks) and the others
+  V40: decomp n=13 gap -0.32 (RollDP fallback 2.1%); others n=7 gap -4.27 (fallback 54.2%)
+  V50: decomp n=3 gap -1.55 (RollDP fallback 0.2%); others n=17 gap -6.83 (fallback 56.6%)
+== correction networks (results/correction_r2.csv)
+    r2_V  r2_RV  yr_mean  yr_sd
+m                              
+2  0.704  0.063    0.222  0.286
+3  0.851  0.175    0.115  0.136
+4  0.794  0.169    0.109  0.111
+5  0.774  0.142    0.112  0.125
+  R2 RV range 0.053..0.196; R2 V range 0.696..0.853
+== training samples per m: {'B2': 39600, 'B3': 63600, 'B4': 87600, 'B5': 111600}  time s range 27 165

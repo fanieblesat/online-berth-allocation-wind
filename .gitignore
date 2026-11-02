@@ -1,0 +1,6 @@
+*.pyc
+*pycache*
+*.log
+queue*.txt
+*.tar.gz
+*.zip

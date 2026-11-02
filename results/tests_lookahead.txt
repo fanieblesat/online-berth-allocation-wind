@@ -1,0 +1,6 @@
+V20 4000: LookDP(K=n, zero) Z=368.0  RollDP Z=393.0
+V20 4001: LookDP(K=n, zero) Z=419.0  RollDP Z=435.0
+V20 4002: LookDP(K=n, zero) Z=448.0  RollDP Z=472.0
+V20 4003: LookDP(K=n, zero) Z=282.0  RollDP Z=281.0
+V20 4004: LookDP(K=n, zero) Z=312.0  RollDP Z=312.0
+100 decisions checked, 0 mismatches, 3s

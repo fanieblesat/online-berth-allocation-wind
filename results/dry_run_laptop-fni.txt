@@ -1,0 +1,20 @@
+host laptop-fni
+V20 seed 1000: DP optimal labels 199 | PI-AO 0.0s PI-FREE(60s cap) 13.9s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.0s RollDP 0.0s
+V20 seed 1001: DP optimal labels 733 | PI-AO 0.0s PI-FREE(60s cap) 60.1s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.0s RollDP 0.1s
+V20: DQN 0.174s/episode -> 4000 episodes = 0.19 h per seed
+V30 seed 1000: DP optimal labels 1823 | PI-AO 0.1s PI-FREE(60s cap) 60.3s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.0s RollDP 0.1s
+V30 seed 1001: DP optimal labels 2490 | PI-AO 0.1s PI-FREE(60s cap) 60.1s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.0s RollDP 0.3s
+V30: DQN 0.064s/episode -> 4000 episodes = 0.07 h per seed
+V40 seed 1000: DP optimal labels 3539 | PI-AO 0.1s PI-FREE(60s cap) 60.2s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.1s RollDP 0.6s
+V40 seed 1001: DP optimal labels 74719 | PI-AO 18.0s PI-FREE(60s cap) 60.2s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.9s RollDP 41.5s
+V40: DQN 0.094s/episode -> 4000 episodes = 0.10 h per seed
+V50 seed 1000: DP optimal labels 116071 | PI-AO 52.7s PI-FREE(60s cap) 60.4s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 0.9s RollDP 9.7s
+V50 seed 1001: DP cap labels 290079 | PI-AO 766.0s PI-FREE(60s cap) 60.4s FirstFree 0.0s MyopicC 0.0s LowExposure 0.0s Static 757.6s RollDP 2114.0s
+V50: DQN 0.161s/episode -> 4000 episodes = 0.18 h per seed
+QL: 14.3 ms/episode -> 200,000 episodes = 0.80 h per seed
+V20: ~7.1 core-h (PI-FREE at a 600 s limit, 5 DQN trainings and evaluations)
+V30: ~10.4 core-h (PI-FREE at a 600 s limit, 5 DQN trainings and evaluations)
+V40: ~11.1 core-h (PI-FREE at a 600 s limit, 5 DQN trainings and evaluations)
+V50: ~41.8 core-h (PI-FREE at a 600 s limit, 5 DQN trainings and evaluations)
+sensitivity (16 points, no PI-FREE): ~0.1 core-h; QL 5 seeds ~4.0 core-h
+TOTAL ~75 core-hours (+ PI-FREE time limits)
